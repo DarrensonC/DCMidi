@@ -1,4 +1,5 @@
-export const WHATSAPP_NUMBER_E164 = "55SEUNUMEROAQUI";
+export const WHATSAPP_NUMBER_E164 =
+  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER_E164 ?? "55SEUNUMEROAQUI";
 
 export function whatsappHref(message: string) {
   const text = encodeURIComponent(message);

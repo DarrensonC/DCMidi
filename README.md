@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## DC Mídias — Landing Pages (Next.js + Tailwind + Framer Motion)
+
+Rotas:
+- **LP 01 (Assessoria Growth)**: `/assessoria-growth`
+- **LP 02 (Gestão de Tráfego)**: `/gestao-trafego`
 
 ## Getting Started
 
@@ -16,9 +20,20 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Index/Home: `src/app/page.tsx`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Variáveis de ambiente (produção)
+
+Para o botão/formulário abrir o WhatsApp corretamente:
+- **`NEXT_PUBLIC_WHATSAPP_NUMBER_E164`**: ex. `5541999999999`
+
+Em dev, você pode criar um `.env.local`:
+
+```bash
+NEXT_PUBLIC_WHATSAPP_NUMBER_E164=5541999999999
+```
+
+Este projeto usa `next/font` (Inter + Montserrat) e Tailwind CSS v4 (CSS-first).
 
 ## Learn More
 
