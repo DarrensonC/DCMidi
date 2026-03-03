@@ -1,26 +1,94 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* DC Mídias – Dark Premium */
+  --background: #0a0a0a;
+  --foreground: #f5f7fb;
+  --muted: #a1a1aa;
+  --muted-2: #71717a;
+
+  /* Brand */
+  --brand: #e83e2d; /* laranja-avermelhado do logo */
+  --brand-2: #ff6a3d;
+  --cta: #22c55e; /* verde vibrante para CTA */
+
+  /* Surfaces */
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface-2: rgba(255, 255, 255, 0.09);
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+  --ring: rgba(232, 62, 45, 0.35);
+
+  /* Radius */
+  --radius-xl: 22px;
+  --radius-lg: 16px;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-muted: var(--muted);
+  --color-muted-2: var(--muted-2);
+
+  --color-brand: var(--brand);
+  --color-brand-2: var(--brand-2);
+  --color-cta: var(--cta);
+
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+
+  --radius-xl: var(--radius-xl);
+  --radius-lg: var(--radius-lg);
+
+  --shadow-premium: var(--shadow);
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-montserrat);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, Arial, "Noto Sans", "Apple Color Emoji",
+    "Segoe UI Emoji";
+  text-rendering: optimizeLegibility;
+}
+
+/* Background futurista (orbes + glow discreto) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(700px 400px at 10% 12%, rgba(232, 62, 45, 0.24), transparent 60%),
+    radial-gradient(900px 500px at 85% 18%, rgba(255, 106, 61, 0.16), transparent 62%),
+    radial-gradient(700px 380px at 55% 92%, rgba(34, 197, 94, 0.10), transparent 62%),
+    radial-gradient(1200px 900px at 50% 45%, rgba(255, 255, 255, 0.04), transparent 65%);
+  filter: saturate(1.05);
+}
+
+::selection {
+  background: rgba(232, 62, 45, 0.35);
+  color: var(--foreground);
+}
+
+/* Helpers de acessibilidade */
+:focus-visible {
+  outline: 2px solid rgba(34, 197, 94, 0.85);
+  outline-offset: 2px;
 }

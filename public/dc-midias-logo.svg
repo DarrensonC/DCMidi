@@ -1,0 +1,26 @@
+<svg width="520" height="120" viewBox="0 0 520 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DC Mídias">
+  <defs>
+    <linearGradient id="g" x1="90" y1="20" x2="250" y2="100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E83E2D"/>
+      <stop offset="1" stop-color="#FF6A3D"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- mark (placeholder inspirado no logo) -->
+  <g filter="url(#glow)" opacity="0.95">
+    <path d="M78 30C62 30 50 42 50 58C50 74 62 86 78 86H164C173 86 180 79 180 70C180 61 173 54 164 54H92C83 54 76 47 76 38C76 34 77 32 78 30Z" fill="url(#g)" opacity="0.95"/>
+    <path d="M206 34C215 34 222 41 222 50C222 59 215 66 206 66H128C119 66 112 73 112 82C112 91 119 98 128 98H214C230 98 242 86 242 70C242 54 230 42 214 42H206V34Z" fill="url(#g)" opacity="0.9"/>
+  </g>
+  <!-- wordmark -->
+  <text x="270" y="78" fill="#F5F7FB" font-size="56" font-family="Inter, ui-sans-serif, system-ui" font-weight="700" letter-spacing="-1.2">
+    DC Mídias
+  </text>
+</svg>
+
+
