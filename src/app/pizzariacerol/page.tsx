@@ -7,8 +7,6 @@ import { Badge } from "@/components/ui/Badge";
 import { ButtonLink } from "@/components/ui/Button";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Section } from "@/components/ui/Section";
-import { LeadForm } from "@/components/landing/LeadForm";
-
 /* ─── Serviços inclusos ─────────────────────────────────────── */
 const services = [
   {
@@ -123,7 +121,7 @@ export default function PropostaCerolPizzaria() {
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <Section as="section" className="pt-16 pb-20 sm:pt-20 sm:pb-24">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+        <div className="grid items-center gap-12">
 
           {/* Esquerda */}
           <div>
@@ -181,33 +179,6 @@ export default function PropostaCerolPizzaria() {
             </Reveal>
           </div>
 
-          {/* Direita: formulário */}
-          <div className="relative">
-            <Reveal>
-              <div className="absolute -inset-4 -z-10 opacity-60 blur-3xl [background:radial-gradient(520px_240px_at_60%_40%,rgba(232,62,45,0.38),transparent_65%)]" />
-              <GlassCard id="form-hero">
-                <div className="p-7">
-                  <p className="text-sm font-semibold text-foreground">
-                    Quer conversar sobre a proposta?
-                  </p>
-                  <p className="mt-1 text-xs text-muted">
-                    Preencha e fale direto no WhatsApp — sem enrolação.
-                  </p>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    <Badge>3 meses de contrato</Badge>
-                    <Badge>8 vídeos/mês</Badge>
-                    <Badge>PIX sem juros</Badge>
-                  </div>
-                  <div className="mt-5">
-                    <LeadForm
-                      ctaLabel="Quero fechar essa proposta"
-                      offerLabel="Proposta Cerol Pizzaria — Tráfego + Produção de Vídeo"
-                    />
-                  </div>
-                </div>
-              </GlassCard>
-            </Reveal>
-          </div>
         </div>
       </Section>
 
